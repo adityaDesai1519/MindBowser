@@ -1,0 +1,35 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <div class="right-content">
+  <style>
+  
+
+/* FORM TYPOGRAPHY*/
+
+input[type=button], input[type=submit], input[type=reset],a  {
+  background-color: #56baed;
+  border: none;
+  color: white;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom:5px;
+}
+
+
+</style>
+  <div id="formContent">
+  <form [formGroup]="form" #LoginInformation (ngSubmit)="manager_login(LoginInformation)">
+      <input type="text" id="email" formControlName="email" name="email" placeholder="Email ID" required>
+      <input type="password" formControlName="password" id="password" name="login" placeholder="password" required>
+      <input type="submit" value="Log In"/>
+	  <a routerLink="/signup-manager" value="Sign Up" style="margin-left: 5px;">Sign Up</a>
+	  <br/>
+    </form>
+  </div>
+  </div>

@@ -1,0 +1,25 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <div id="formContent">
+	<h1> Sign up </h1>
+    <form [formGroup]="form" #SignUpInformation (ngSubmit)="onSubmit(SignUpInformation)">
+      <input type="text" id="email" name="email" formControlName="email" placeholder="Enter Emailid">
+      <input type="password" id="password" name="password" formControlName="password" placeholder="Enter password">
+	  <input type="password" id="repassword" name="repassword" formControlName="repassword" placeholder="Reenter password">
+	  <input type="text" id="fname" name="fname" formControlName="fname" placeholder="Enter first Name">
+	  <input type="text" id="lname" name="lname" formControlName="lname" placeholder="Enter Last Name">
+	  <input type="text" id="address" name="address" formControlName="address" placeholder="Enter address">
+	   <input type="tel" id="mobile" name="mobile" formControlName="mobile" placeholder="Enter Mobile Numebr" pattern="[0-9]{10}">
+	  <input type="text" id="city" name="city" formControlName="city" placeholder="Enter City">
+	  <select name="dept" id="dept" formControlName="dept">
+		<option id="Dept1" value="Department 1">Department1</option>
+		<option id="Dept2" value="Department 2">Department2</option>
+		<option id="Dept3" value="Department 3">Department3</option>
+		<option id="Dept4" value="Department 4">Department4</option>
+	  </select>
+	  
+	  <input type="submit" value="Sign Up"/>
+	  <br/>
+    </form>
+</div>
