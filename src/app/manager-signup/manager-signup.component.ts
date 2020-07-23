@@ -44,7 +44,8 @@ onSubmit(SignUpInformation){
 				  this.router.navigate(['/manager-login']);  
 			}
 			else{
-				window.alert("Failed!! Try again."); 
+				console.log(data);
+				window.alert("Failed!!"+data._body); 
 			}
 		});
 	}

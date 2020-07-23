@@ -70,7 +70,7 @@ updateEmployee(UpdateEmployee){
 	this.employee.emp_dob = this.Dob.value;
 	this.employee.emp_mobile = this.Mobile.value;
 	this.employee.emp_city = this.City.value;
-	this.employee.emp_mgrId = localStorage.getItem("manager_email").toString();
+	this.employee.emp_mgrid = localStorage.getItem("manager_email").toString();
 	this.employeeServiceService.update_employee(this.employee).subscribe(data=>{
 		console.log(data._body);
 		if(data._body=="success"){

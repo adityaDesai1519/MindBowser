@@ -6,5 +6,5 @@ export class Employee {
 	emp_dob:String;
 	emp_mobile:String;
 	emp_city:String;
-	emp_mgrId:String;
+	emp_mgrid:String;
 }

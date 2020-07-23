@@ -26,9 +26,9 @@ manager_login(ManagerLogin){
 	if(this.manager.mgr_email=="" || (this.manager.mgr_password)==""){
 		window.alert("Please fill all the fields");
 	}else{
-	this.employeeServiceService.login(this.manager).subscribe(data=>{
-		console.log(data._body);
-		if(data._body=="success"){
+	this.employeeServiceService.login(this.manager.mgr_email,this.manager.mgr_password).subscribe(data=>{
+		console.log(JSON.parse(data._body)[0].mgr_email);
+		if(JSON.parse(data._body)[0].mgr_email===(this.manager.mgr_email)){
 			this.router.navigate(['/manager-home']);
 			localStorage.setItem("manager_email",this.manager.mgr_email.toString());
 		}else{

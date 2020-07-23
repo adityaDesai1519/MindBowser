@@ -32,7 +32,7 @@ onSubmit(CreateEmployeeInformation){
 	this.employee.emp_dob = this.Dob.value;
 	this.employee.emp_mobile = this.Mobile.value;
 	this.employee.emp_city = this.City.value;
-	this.employee.emp_mgrId = localStorage.getItem("manager_email").toString();
+	this.employee.emp_mgrid = localStorage.getItem("manager_email").toString();
 	this.employeeServiceService.create_employee(this.employee).subscribe(data=>{
 		if(data._body=="success"){
 			  this.router.navigate(['/manager-home']);  
